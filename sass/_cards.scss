@@ -1,0 +1,49 @@
+/***************restaurant************/
+        
+      
+    
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 35px;
+    background-color: $backroungd-cards;
+    margin-top: 40px;
+    .restaurant__cards { 
+   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+            .card {
+                width: 340px;
+                background-color: white;
+                border-radius: 15px;
+                padding-bottom: 10px;
+
+                .card__image {
+                    height: 231px;
+                    width:100%;
+                    border-radius: 15px 15px 0 0;
+                }
+
+                .card__txt {
+                    display: flex;
+                    flex-direction: row; /* Assurez-vous que les éléments enfants sont alignés horizontalement */
+                    justify-content: space-between; /* Place les éléments à l'extrémité de chaque ligne */
+                    align-items: center; /* Aligne les éléments verticalement au centre */
+                    padding-left: 5px;
+                }
+    
+            }
+    }
+}
+
+
+
+
+
+
+

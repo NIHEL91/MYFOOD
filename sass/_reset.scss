@@ -14,135 +14,171 @@ html {/* Utilisation de box-sizing: inherit pour hériter du modèle de boîte d
 
 body {
     display: flex;
-    justify-content: center;
     font-family: "Roboto", serif;
+    
 
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
     @media (max-width: 767.98px) {
-
-        body {
-            display: flex;
-            justify-content: center;
-            font-family: "Roboto", serif;
-        
+        .title {
+            margin-left:20px;
         }
     
-        .header {
+        /****search*****/
+        .search__title {
+            margin-left: 20px;
+            margin-right: 20px;
+            text-align: center;
             display: flex;
+            align-items: center;
+            justify-content: center;
             flex-direction: column;
+            gap: 20px;
+          }
+          }
+        }
+        .search__bar {
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap:35px;
-        
-        }
-            .header__logo {
-                width:162px; /* la largeur */
-                height: 44px;
-                margin: 15px;
-            }
-        
-        .search {
-            margin-left: 10px;
-            .search__bar {
-    
+            padding-bottom: 35px;
+            gap: 35px;
+            background-color: rgba(246, 246, 246, 1);
             
             .search__bar--input {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-            }}
-        }
-        .section__actions {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap:35px;
-        }
+                background-color: rgba(234, 234, 234, 1);
+                border-top: 2px rgba(234, 234, 234, 1); /* Bordure en haut */
+                border-bottom: 2px rgba(234, 234, 234, 1);
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 25); /* Ombre avec un léger flou */
+                height: 50px;
+                width: 100%;
+
+                    .fa-location-dot {
+                        margin-right: 20px;
+
+                    }
+                    
         
-       
-        
-        .search {
-            margin:  auto; /* Centrer la section horizontalement */
-            .section__content {
-                @include flex-center-columun;
-    
+                        input::placeholder {
+                            font-weight: bold;
+                            
+                        }
+                    }
+                    .search__bar--input input {
+                        border: none; /* Désactive la bordure */
+                        background-color: initial;
             }
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-    }
-    
-        .section-content {
-            display: flex;
-            align-items:start;
-            justify-content: center;
-            flex-direction: column;  
-        }
-        .lien {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        
-        }
-        .lienfonction {
-            margin:initial;
-            width: 162px;
+            .search__introduction {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                justify-content: center;
+                gap:20px;
+
+                p {
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    text-align: center;
+                }
+            }
             
-        
-        }
-        
-        .filtre h3 {
-            width: 100%;
-        
-        }
-        .filtre a {
-            font-size: 14px;
-        }
-        
-        .restaurants {
+            .search__explore {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                justify-content: center;
+                width: 218px;
+                height: 50px;
+                color: white;
+                background-color: $primary-color;
+                border-radius: 20px;
+            }
+
+        }   
+                 .fa-duotone {
+                    color:rgba(126, 126, 126, 1);
+                 }
+           
+            /****boutton****/
+            
+        /*****functionality***/
+        .functionality {
             display: flex;
             flex-direction: column;
-        }
+            gap: 35px;
+            margin-top: 20px;
+
+                .functionality__links {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap:20px;
+                
         
-       
+                        .functionality__links--card {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 20px;
+                            background-color: rgb(246, 246, 246);
+                            width: 322px;
+                            height: 73px;
+                            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 15);
+
+
+                            .numbered-icon {
+                                min-width: 24px;
+                                height: 24px;
+                                border: 1px solid rgba(217, 217, 217, 1);
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: white;
+                                background-color: $primary-color;
+                                position: absolute;
+                               font-family: 'roboto';
+                                left: 20px;
+                            }
+
+                            .fa-mobile-screen-button,  .fa-store {
+                                color: rgb(126, 126, 126);
+                            }
+                        }
+                
+                }
         
-        .barre-recherche {
-            justify-content: center;
-        }
+              
+                
+
+                
+        
     
-        .restaurants .card { 
-            width: 346px;
-            height:231px ;
-            padding: 5px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre avec un léger flou */
-        
-        }
         
         
-        .card {
-            width: 340px;
-           height : 251px;
-        }
+      
         
-        .image {
-            width:100%;
-        }
+
         
         /*********footer******/
         .footer {
+           background-color:  rgba(53, 53, 53, 1);
             display: flex;
             flex-direction: column;
             align-items: start;
             gap:30px;
-        
         }
         
-        
+    }
     
-        }
+
     
-}
