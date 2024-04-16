@@ -92,8 +92,15 @@ body a {
   width: 218px;
   height: 50px;
   color: white;
-  background-color: rgb(147, 86, 220);
+  background-image: linear-gradient(to left, rgb(147, 86, 220), rgb(255, 121, 218));
   border-radius: 20px;
+  cursor: pointer; /* Curseur pointer */
+  transition: background-color 0.5s; /* Transition en douceur */
+  font-size: 16px;
+}
+.search__bar input[type=button]:hover {
+  background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+  /* Nouvelle couleur de fond au survol */
 }
 
 .fa-duotone {
@@ -140,8 +147,13 @@ body a {
   font-family: "roboto";
   left: 20px;
 }
-.functionality .functionality__links .functionality__links--card .fa-mobile-screen-button, .functionality .functionality__links .functionality__links--card .fa-store {
+.functionality .functionality__links .functionality__links--card .fa-mobile-screen-button {
   color: rgb(126, 126, 126);
+  margin-right: 20px;
+}
+.functionality .functionality__links .functionality__links--card .fa-store {
+  color: rgb(147, 86, 220);
+  margin-right: 20px;
 }
 .functionality .footer {
   background-color: rgb(53, 53, 53);
@@ -187,18 +199,62 @@ body a {
   background-color: white;
   border-radius: 15px;
   padding-bottom: 10px;
+  position: relative;
 }
 .restaurants .restaurant__cards .card .card__image {
-  height: 231px;
+  height: 200px;
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
+.restaurants .restaurant__cards .card .card__news {
+  border-radius: 2px;
+  width: 80px;
+  height: 29px;
+  background-color: rgb(153, 226, 208);
+  color: rgb(0, 135, 102);
+  display: flex; /* Utilisation de flexbox */
+  align-items: center; /* Centrage vertical */
+  justify-content: center; /* Centrage horizontal */
+  position: absolute;
+  top: 15px; /* Ajustez la valeur selon votre préférence */
+  right: 15px; /* Ajustez la valeur selon votre préférence */
+}
 .restaurants .restaurant__cards .card .card__txt {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.restaurants .restaurant__cards .card .card__text {
   display: flex;
   flex-direction: row; /* Assurez-vous que les éléments enfants sont alignés horizontalement */
   justify-content: space-between; /* Place les éléments à l'extrémité de chaque ligne */
   align-items: center; /* Aligne les éléments verticalement au centre */
   padding-left: 5px;
+  /* Style de base de l'icône de cœur */
+  /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
+  /* CSS pour cacher l'élément input */
+}
+.restaurants .restaurant__cards .card .card__text .heart-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>');
+  background-size: cover;
+  cursor: pointer; /* Ajoute un curseur pointer pour indiquer que l'icône est cliquable */
+}
+.restaurants .restaurant__cards .card .card__text #heart-checkbox:checked + .heart-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+  fill: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+}
+.restaurants .restaurant__cards .card .card__text .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
