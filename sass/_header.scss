@@ -1,7 +1,6 @@
 /************header*********/
         .header {
-            display: flex;
-            flex-direction: column;
+            @include flex-center-columun;
             justify-content: center;
             align-items: center;
             gap:35px;

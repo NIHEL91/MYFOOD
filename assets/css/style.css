@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*les links avec les texts de boutton*/
 /* Réinitialisation des marges et des rembourrages pour tous les éléments */
 *,
 *::before,
@@ -31,27 +30,26 @@ body a {
   body .search__title {
     margin-left: 20px;
     margin-right: 20px;
-    text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    text-align: center;
     gap: 20px;
   }
 }
 
 .search__bar {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding-bottom: 35px;
   gap: 35px;
   background-color: rgb(246, 246, 246);
 }
 .search__bar .search__bar--input {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: rgb(234, 234, 234);
@@ -88,7 +86,6 @@ body a {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: center;
   width: 218px;
   height: 50px;
   color: white;
@@ -100,21 +97,18 @@ body a {
 }
 .search__bar input[type=button]:hover {
   background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
-  /* Nouvelle couleur de fond au survol */
 }
 
 .fa-duotone {
   color: rgb(126, 126, 126);
 }
 
-/****boutton****/
 /*****functionality***/
 .functionality {
   display: flex;
   flex-direction: column;
   gap: 35px;
   margin-top: 20px;
-  /*********footer******/
 }
 .functionality .functionality__links {
   display: flex;
@@ -144,7 +138,7 @@ body a {
   color: white;
   background-color: rgb(147, 86, 220);
   position: absolute;
-  font-family: "roboto";
+  font-family: "Roboto";
   left: 20px;
 }
 .functionality .functionality__links .functionality__links--card .fa-mobile-screen-button {
@@ -154,13 +148,6 @@ body a {
 .functionality .functionality__links .functionality__links--card .fa-store {
   color: rgb(147, 86, 220);
   margin-right: 20px;
-}
-.functionality .footer {
-  background-color: rgb(53, 53, 53);
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 30px;
 }
 
 /************header*********/
@@ -177,8 +164,34 @@ body a {
   margin: 15px;
 }
 
-/*********footer******/
-/***************restaurant************/
+footer {
+  background-color: rgb(53, 53, 53);
+}
+footer .footer__part {
+  padding-top: 16px;
+  padding-left: 16px;
+  font-family: "shrikhand";
+  font-style: italic;
+  font-size: 18px;
+  color: white;
+}
+footer .footer__txt {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  margin-left: 16px;
+  color: white;
+  padding-bottom: 16px;
+}
+footer .footer__txt .footer__txt--link {
+  display: flex;
+}
+footer .footer__txt .footer__txt--link .fa-solid {
+  margin-right: 10px;
+}
+
+/***************restaurant*************/
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -192,7 +205,8 @@ body a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 18px;
+  margin-bottom: 50px;
 }
 .restaurants .restaurant__cards .card {
   width: 340px;
@@ -212,9 +226,9 @@ body a {
   height: 29px;
   background-color: rgb(153, 226, 208);
   color: rgb(0, 135, 102);
-  display: flex; /* Utilisation de flexbox */
-  align-items: center; /* Centrage vertical */
-  justify-content: center; /* Centrage horizontal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 15px; /* Ajustez la valeur selon votre préférence */
   right: 15px; /* Ajustez la valeur selon votre préférence */
@@ -233,6 +247,9 @@ body a {
   /* Style de base de l'icône de cœur */
   /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
   /* CSS pour cacher l'élément input */
+  /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
+  /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
+  /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
 }
 .restaurants .restaurant__cards .card .card__text .heart-icon {
   display: inline-block;
@@ -242,7 +259,7 @@ body a {
   background-size: cover;
   cursor: pointer; /* Ajoute un curseur pointer pour indiquer que l'icône est cliquable */
 }
-.restaurants .restaurant__cards .card .card__text #heart-checkbox:checked + .heart-icon {
+.restaurants .restaurant__cards .card .card__text #heart-checkbox-1:checked + .heart-icon {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
   fill: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
 }
@@ -252,9 +269,21 @@ body a {
   height: 1px;
   margin: -1px;
   padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  overflow: hidden; /*??????*/
+  clip: rect(0, 0, 0, 0); /*??????*/
   border: 0;
+}
+.restaurants .restaurant__cards .card .card__text #heart-checkbox-2:checked + .heart-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+  fill: linear-gradient(rgb(147, 86, 220));
+}
+.restaurants .restaurant__cards .card .card__text #heart-checkbox-3:checked + .heart-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+  fill: linear-gradient(rgb(147, 86, 220));
+}
+.restaurants .restaurant__cards .card .card__text #heart-checkbox-4:checked + .heart-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+  fill: linear-gradient(rgb(147, 86, 220));
 }
 
 /*# sourceMappingURL=style.css.map */

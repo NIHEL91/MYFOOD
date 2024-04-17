@@ -12,9 +12,13 @@ html {/* Utilisation de box-sizing: inherit pour hériter du modèle de boîte d
     box-sizing: border-box;/* Assure que la largeur et la hauteur incluent le padding et la bordure */
 }
 
+  
+  
 body {
     display: flex;
     font-family: "Roboto", serif;
+
+  
     
 
     a {
@@ -30,29 +34,23 @@ body {
         .search__title {
             margin-left: 20px;
             margin-right: 20px;
-            text-align: center;
-            display: flex;
+            @include flex-center-columun;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
+            text-align: center;
             gap: 20px;
           }
           }
         }
         .search__bar {
-            display: flex;
+            @include flex-center-row;
             flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
             padding-bottom: 35px;
             gap: 35px;
-            background-color: rgba(246, 246, 246, 1);
+            background-color:$backroungd-cards;
             
             .search__bar--input {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
+                @include flex-center-row;
                 background-color: rgba(234, 234, 234, 1);
                 border-top: 2px rgba(234, 234, 234, 1); /* Bordure en haut */
                 border-bottom: 2px rgba(234, 234, 234, 1);
@@ -66,18 +64,18 @@ body {
                     }
                     
         
-                        input::placeholder {
-                            font-weight: bold;
-                            
-                        }
+                    input::placeholder {
+                            font-weight: bold;    
                     }
+
+                }
                     .search__bar--input input {
                         border: none; /* Désactive la bordure */
                         background-color: initial;
-            }
+                    }
+                
             .search__introduction {
-                display: flex;
-                flex-direction: column;
+               @include flex-center-columun;
                 justify-content: center;
                 align-items: center;
                 justify-content: center;
@@ -91,10 +89,7 @@ body {
             }
             
             .search__explore {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                justify-content: center;
+                @include flex-center-row;
                 width: 218px;
                 height: 50px;
                 color: white;
@@ -107,7 +102,6 @@ body {
             }
             input[type="button"]:hover {
                 background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
-                /* Nouvelle couleur de fond au survol */
             }
 
         }   
@@ -115,29 +109,24 @@ body {
                     color:rgba(126, 126, 126, 1);
                  }
            
-            /****boutton****/
             
         /*****functionality***/
         .functionality {
-            display: flex;
-            flex-direction: column;
+            @include flex-center-columun;
             gap: 35px;
             margin-top: 20px;
 
                 .functionality__links {
-                    display: flex;
-                    flex-direction: column;
+                    @include flex-center-columun;
                     justify-content: center;
                     align-items: center;
                     gap:20px;
                 
         
                         .functionality__links--card {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            @include flex-center-row;
                             border-radius: 20px;
-                            background-color: rgb(246, 246, 246);
+                            background-color:$backroungd-cards;
                             width: 322px;
                             height: 73px;
                             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 15);
@@ -148,13 +137,11 @@ body {
                                 height: 24px;
                                 border: 1px solid rgba(217, 217, 217, 1);
                                 border-radius: 50%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
+                                @include flex-center-row;
                                 color: white;
                                 background-color: $primary-color;
                                 position: absolute;
-                               font-family: 'roboto';
+                                font-family: 'Roboto';
                                 left: 20px;
                             }
 
@@ -171,26 +158,6 @@ body {
                 
                 }
         
-              
-                
-
-                
-        
-    
-        
-        
-      
-        
-
-        
-        /*********footer******/
-        .footer {
-           background-color:  rgba(53, 53, 53, 1);
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-            gap:30px;
-        }
         
     }
     

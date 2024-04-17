@@ -12,15 +12,8 @@
 @mixin flex-center-columun {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:35px;
+   
 }
    
-@mixin flex-start-column {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap:30px;
 
-}
+

@@ -1,21 +1,18 @@
-/***************restaurant************/
-        
-      
-    
+/***************restaurant*************/   
 .restaurants {
-    display: flex;
-    flex-direction: column;
+   @include flex-center-columun;
     gap: 20px;
     padding-top: 35px;
     background-color: $backroungd-cards;
     margin-top: 40px;
 
     .restaurant__cards { 
-        display: flex;
-        flex-direction: column;
+        @include flex-center-columun;
         align-items: center;
         justify-content: center;
-        gap: 40px;
+        gap: 18px;
+        margin-bottom: 50px;
+
 
             .card {
                 width: 340px;
@@ -35,9 +32,7 @@
                     height: 29px;
                     background-color:rgba(153, 226, 208, 1);
                     color: rgb(0, 135, 102);
-                    display: flex; /* Utilisation de flexbox */
-                    align-items: center; /* Centrage vertical */
-                    justify-content: center; /* Centrage horizontal */
+                    @include flex-center-row;
                     position: absolute;
                     top: 15px; /* Ajustez la valeur selon votre préférence */
                     right: 15px; /* Ajustez la valeur selon votre préférence */
@@ -46,8 +41,7 @@
                 }
                 
                 .card__txt {
-                    display: flex;
-                    flex-direction: column; 
+                    @include flex-center-columun;
                     margin:10px;
                 }
                 .card__text {
@@ -69,11 +63,11 @@
                     }
 
                     /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
-                    #heart-checkbox:checked + .heart-icon {
+                    #heart-checkbox-1:checked + .heart-icon {
                         background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
                         fill:linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
                     }
-
+                    
                     /* CSS pour cacher l'élément input */
                     .visually-hidden {
                         position: absolute;
@@ -81,13 +75,33 @@
                         height: 1px;
                         margin: -1px;
                         padding: 0;
-                        overflow: hidden;
-                        clip: rect(0, 0, 0, 0);
+                        overflow: hidden;/*??????*/
+                        clip: rect(0, 0, 0, 0);/*??????*/
                         border: 0;
                     }
 
+                   
 
+                    /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
+                    #heart-checkbox-2:checked + .heart-icon {
+                        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+                        fill:linear-gradient($primary-color);
+                    }
+                                     
 
+                    /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
+                    #heart-checkbox-3:checked + .heart-icon {
+                        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+                        fill:linear-gradient($primary-color);
+                    }
+                    
+                   
+
+                    /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
+                    #heart-checkbox-4:checked + .heart-icon {
+                        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+                        fill:linear-gradient( $primary-color);
+                    }
                 }
     
             }

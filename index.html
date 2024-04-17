@@ -28,6 +28,14 @@
         </header>
 
         <main>
+            <div class="loader-wrapper">
+                <div class="loader"></div>
+              </div>
+              <div class="welcome-screen hidden">
+                <h1>Bienvenue !</h1>
+                <p>Merci de visiter notre site.</p>
+            </div>
+              
             <section class="search">
                     <form class="search__bar" method="post">
                         <div class="search__bar--input">
@@ -45,8 +53,6 @@
                         </a>
                     </form>
             </section>
-
-                
             <section class="functionality">
                     <div class="functionality__title title">
                         <h2 >Fonctionnement</h2>
@@ -89,8 +95,8 @@
                                     <h3>La palette du goût</h3>
                                         <div class="card__text">
                                             <p class="card__subtitle">Ménilmontant</p>
-                                            <input type="checkbox" id="heart-checkbox" class="visually-hidden">
-                                            <label for="heart-checkbox" class="heart-icon"></label>
+                                            <input type="checkbox" id="heart-checkbox-1" class="visually-hidden">
+                                            <label for="heart-checkbox-1" class="heart-icon"></label>
 
                                         </div>
                                     </div>
@@ -107,8 +113,8 @@
                                         <h3>La note enchantée</h3>
                                             <div class="card__text">
                                                 <p class="card__subtitle">Charonne</p>
-                                                <i class="fa-sharp fa-solid fa-heart"></i>
-                                            </div>
+                                                <input type="checkbox" id="heart-checkbox-2" class="visually-hidden">
+                                                <label for="heart-checkbox-2" class="heart-icon"></label>                                            </div>
                                     </div>
                                     
                                 </article>
@@ -121,8 +127,8 @@
                                             <h3>À la française</h3>
                                             <div class="card__text">
                                                 <p class="card__subtitle">Cité Rouge</p>
-                                                <i class="fa-regular fa-heart"></i>
-                                            </div>
+                                                <input type="checkbox" id="heart-checkbox-3" class="visually-hidden">
+                                                <label for="heart-checkbox-3" class="heart-icon"></label>                                            </div>
                                     </div>    
                                 </article>
                             </a>
@@ -134,8 +140,8 @@
                                         <h3>Le délice des sens</h3>
                                         <div class="card__text">
                                             <p class="card__subtitle">Folie-Méricourt</p>
-                                            <i class="fa-regular fa-heart"></i>
-                                        </div>
+                                            <input type="checkbox" id="heart-checkbox-4" class="visually-hidden">
+                                            <label for="heart-checkbox-4" class="heart-icon"></label>                                        </div>
                                 </article>
                             </a>
                         </div>
@@ -144,12 +150,19 @@
             
         </main>
         <footer>
-            <div class="footer">
-                    <img src="./assets/images/logo/ohmyfood.png" class="footer_logo" alt="image logo"/>
-                <div class="footer__part">
+            <div class="footer">                    
+                <h3 class="footer__part">ohmyfood</h3>
+                <div>
                     <div class="footer__txt">
-                        <a href="#"><p>Proposer un restaurant</p></a>
-                        <a href="#"><p>Devenir partenaire</p></a>
+                        <div class="footer__txt--link">
+                            <i class="fa-solid fa-utensils"></i>
+                            <a href="#"><p>Proposer un restaurant</p></a>
+                        </div>
+                        
+                        <div class="footer__txt--link"> 
+                            <i class="fa-solid fa-handshake-angle"></i>
+                            <a href="#"><p>Devenir partenaire</p></a>
+                        </div>
                         <a href="#"><p>Mentions légales</p></a>
                         <a href="#"><p>Contact</p></a>
                     </div>
