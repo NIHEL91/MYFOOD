@@ -1,5 +1,5 @@
-/************header*********/
-        .header {
+
+       .header {
             @include flex-center-columun;
             justify-content: center;
             align-items: center;
@@ -11,3 +11,4 @@
                     margin: 15px;
                         }       
         }
+    

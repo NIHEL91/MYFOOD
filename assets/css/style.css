@@ -15,41 +15,29 @@ html { /* Utilisation de box-sizing: inherit pour hériter du modèle de boîte 
 body {
   display: flex;
   font-family: "Roboto", serif;
+  /****search*****/
+  /*****functionality***/
 }
 body a {
   color: inherit;
   text-decoration: none;
 }
-@media (max-width: 767.98px) {
-  body {
-    /****search*****/
-  }
-  body .title {
-    margin-left: 20px;
-  }
-  body .search__title {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 20px;
-  }
+body .title {
+  margin-left: 20px;
 }
-
-.search__bar {
+body .search__bar {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
   padding-bottom: 35px;
   gap: 35px;
   background-color: rgb(246, 246, 246);
+  align-items: center;
+  justify-content: center;
 }
-.search__bar .search__bar--input {
+body .search__bar .search__bar--input {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: rgb(234, 234, 234);
@@ -59,17 +47,17 @@ body a {
   height: 50px;
   width: 100%;
 }
-.search__bar .search__bar--input .fa-location-dot {
+body .search__bar .search__bar--input .fa-location-dot {
   margin-right: 20px;
 }
-.search__bar .search__bar--input input::placeholder {
+body .search__bar .search__bar--input input::placeholder {
   font-weight: bold;
 }
-.search__bar .search__bar--input input {
+body .search__bar .search__bar--input input {
   border: none; /* Désactive la bordure */
   background-color: initial;
 }
-.search__bar .search__introduction {
+body .search__bar .search__introduction {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,13 +65,24 @@ body a {
   justify-content: center;
   gap: 20px;
 }
-.search__bar .search__introduction p {
+body .search__bar .search__introduction .search__title {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+body .search__bar .search__introduction p {
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
 }
-.search__bar .search__explore {
+body .search__bar .search__explore {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 218px;
@@ -95,30 +94,30 @@ body a {
   transition: background-color 0.5s; /* Transition en douceur */
   font-size: 16px;
 }
-.search__bar input[type=button]:hover {
+body .search__bar input[type=button]:hover {
   background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
 }
-
-.fa-duotone {
-  color: rgb(126, 126, 126);
-}
-
-/*****functionality***/
-.functionality {
+body .functionality {
   display: flex;
   flex-direction: column;
   gap: 35px;
   margin-top: 20px;
 }
-.functionality .functionality__links {
+body .functionality .functionality__links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-.functionality .functionality__links .functionality__links--card {
+@media only screen and (min-width: 1024px) {
+  body .functionality .functionality__links {
+    flex-direction: row;
+  }
+}
+body .functionality .functionality__links .functionality__links--card {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
@@ -127,30 +126,30 @@ body a {
   height: 73px;
   box-shadow: 0px 4px 15px 0px rgb(0, 0, 0);
 }
-.functionality .functionality__links .functionality__links--card .numbered-icon {
+body .functionality .functionality__links .functionality__links--card .numbered-icon {
   min-width: 24px;
   height: 24px;
   border: 1px solid rgb(217, 217, 217);
   border-radius: 50%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   color: white;
   background-color: rgb(147, 86, 220);
   position: absolute;
   font-family: "Roboto";
-  left: 20px;
+  transform: translateX(-160px);
 }
-.functionality .functionality__links .functionality__links--card .fa-mobile-screen-button {
+body .functionality .functionality__links .functionality__links--card .fa-mobile-screen-button, body .functionality .functionality__links .functionality__links--card .fa-list {
   color: rgb(126, 126, 126);
   margin-right: 20px;
 }
-.functionality .functionality__links .functionality__links--card .fa-store {
+body .functionality .functionality__links .functionality__links--card .fa-store {
   color: rgb(147, 86, 220);
   margin-right: 20px;
 }
 
-/************header*********/
 .header {
   display: flex;
   flex-direction: column;
@@ -164,10 +163,10 @@ body a {
   margin: 15px;
 }
 
-footer {
+.footer {
   background-color: rgb(53, 53, 53);
 }
-footer .footer__part {
+.footer .footer__part {
   padding-top: 16px;
   padding-left: 16px;
   font-family: "shrikhand";
@@ -175,7 +174,7 @@ footer .footer__part {
   font-size: 18px;
   color: white;
 }
-footer .footer__txt {
+.footer .footer__txt {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -184,13 +183,28 @@ footer .footer__txt {
   color: white;
   padding-bottom: 16px;
 }
-footer .footer__txt .footer__txt--link {
+.footer .footer__txt .footer__txt--link {
   display: flex;
 }
-footer .footer__txt .footer__txt--link .fa-solid {
+.footer .footer__txt .footer__txt--link .fa-solid {
   margin-right: 10px;
 }
 
+@media only screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+  .footer .footer__part {
+    margin: 30px;
+  }
+  .footer .footer__txt {
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+}
 /***************restaurant*************/
 .restaurants {
   display: flex;
@@ -227,6 +241,7 @@ footer .footer__txt .footer__txt--link .fa-solid {
   background-color: rgb(153, 226, 208);
   color: rgb(0, 135, 102);
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -238,32 +253,27 @@ footer .footer__txt .footer__txt--link .fa-solid {
   flex-direction: column;
   margin: 10px;
 }
-.restaurants .restaurant__cards .card .card__text {
+.restaurants .restaurant__cards .card .card__txt .card__text {
   display: flex;
   flex-direction: row; /* Assurez-vous que les éléments enfants sont alignés horizontalement */
   justify-content: space-between; /* Place les éléments à l'extrémité de chaque ligne */
   align-items: center; /* Aligne les éléments verticalement au centre */
   padding-left: 5px;
   /* Style de base de l'icône de cœur */
-  /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
   /* CSS pour cacher l'élément input */
-  /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
-  /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
-  /* Style de l'icône de cœur rempli lorsque la case à cocher est cochée */
 }
-.restaurants .restaurant__cards .card .card__text .heart-icon {
+.restaurants .restaurant__cards .card .card__txt .card__text :root {
+  --heart-fill-color: rgba(147, 86, 220, 1);
+}
+.restaurants .restaurant__cards .card .card__txt .card__text .heart-icon {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--heart-fill-color)"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>');
   background-size: cover;
-  cursor: pointer; /* Ajoute un curseur pointer pour indiquer que l'icône est cliquable */
+  cursor: pointer;
 }
-.restaurants .restaurant__cards .card .card__text #heart-checkbox-1:checked + .heart-icon {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
-  fill: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
-}
-.restaurants .restaurant__cards .card .card__text .visually-hidden {
+.restaurants .restaurant__cards .card .card__txt .card__text .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -273,17 +283,36 @@ footer .footer__txt .footer__txt--link .fa-solid {
   clip: rect(0, 0, 0, 0); /*??????*/
   border: 0;
 }
-.restaurants .restaurant__cards .card .card__text #heart-checkbox-2:checked + .heart-icon {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
-  fill: linear-gradient(rgb(147, 86, 220));
+.restaurants .restaurant__cards .card .card__txt .card__text #heart-checkbox-1:checked + .heart-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" fill="rgba(147, 86, 220, 1)"/></svg>');
 }
-.restaurants .restaurant__cards .card .card__text #heart-checkbox-3:checked + .heart-icon {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
-  fill: linear-gradient(rgb(147, 86, 220));
+.restaurants .restaurant__cards .card .card__txt .card__text #heart-checkbox-2:checked + .heart-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" fill="rgba(147, 86, 220, 1)"/></svg>');
 }
-.restaurants .restaurant__cards .card .card__text #heart-checkbox-4:checked + .heart-icon {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
-  fill: linear-gradient(rgb(147, 86, 220));
+.restaurants .restaurant__cards .card .card__txt .card__text #heart-checkbox-3:checked + .heart-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" fill="rgba(147, 86, 220, 1)"/></svg>');
+}
+.restaurants .restaurant__cards .card .card__txt .card__text #heart-checkbox-4:checked + .heart-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z" fill="rgba(147, 86, 220, 1)"/></svg>');
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants .restaurant__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .restaurants .restaurant__cards .card {
+    width: 490px;
+    height: 251px;
+  }
+  .restaurants .restaurant__cards .card .card__image {
+    height: 200px;
+  }
+  .restaurants .restaurant__cards .card .card__txt {
+    margin: initial;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
