@@ -266,16 +266,16 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   gap: 18px;
   margin-bottom: 50px;
 }
+.restaurants .restaurant__cards a {
+  width: 100%;
+  height: 100%;
+}
 .restaurants .restaurant__cards .card {
   width: 340px;
   background-color: white;
   border-radius: 15px;
   padding-bottom: 10px;
   position: relative;
-}
-.restaurants .restaurant__cards .card a {
-  width: 100%;
-  height: 100%;
 }
 .restaurants .restaurant__cards .card .card__image {
   height: 200px;
@@ -354,17 +354,16 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   }
 }
 
-.header-button {
-  position: fixed;
-  top: 7px;
-  left: 6px;
-  height: 44px;
-  width: 30px;
+.button-retour {
+  position: absolute; /* Position fixe pour rester en haut de la page */
+  top: 20px; /* Distance du haut de la page */
+  left: 20px; /* Distance de la gauche de la page */
+  padding: 10px 20px; /* Espacement intérieur */
+  border-radius: 5px; /* Coins arrondis */
+  text-decoration: none; /* Suppression du soulignage du lien */
 }
-.header-button .fa-solid {
-  font-size: 20px; /* Taille de l'icône */
-  background-color: none;
-  width: 18px;
+.button-retour .fa-arrow-lef {
+  width: 17px;
   height: 16px;
 }
 
@@ -375,22 +374,43 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   width: 375px;
   height: 275px;
 }
+@media only screen and (min-width: 1024px) {
+  .restaurant__image .palette {
+    width: 100%;
+    height: 383px;
+  }
+}
 
 .restaurant {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
   background-color: rgb(246, 246, 246);
   border-radius: 40px 40px 0px 0px;
   padding: 20px;
-  position: absolute;
-  top: 25%;
+  /*position: absolute;
+  top: 25%;*/
+}
+@media only screen and (min-width: 1024px) {
+  .restaurant {
+    margin-left: 193px;
+    margin-right: 193px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .restaurant .restaurants__description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   /* CSS pour cacher l'élément input */
+}
+@media only screen and (min-width: 1024px) {
+  .restaurant .restaurants__description {
+    gap: 20px;
+  }
 }
 .restaurant .restaurants__description .restaurants__description--title {
   font-family: "shrikhand";
@@ -451,10 +471,34 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   width: 349px;
   padding: 10px;
 }
+@media only screen and (min-width: 1024px) {
+  .restaurant .restaurant__menu .menu__choice {
+    width: 634px;
+  }
+}
 .restaurant .restaurant__menu .menu__choice .menu__choice--description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.restaurant .order {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+.restaurant .order .order__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 186px;
+  height: 50px;
+  color: white;
+  background-image: linear-gradient(to left, rgb(147, 86, 220), rgb(255, 121, 218));
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

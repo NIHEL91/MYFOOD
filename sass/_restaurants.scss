@@ -1,129 +1,164 @@
-.header-button {
+.button-retour {
+  position: absolute; /* Position fixe pour rester en haut de la page */
+  top: 20px; /* Distance du haut de la page */
+  left: 20px; /* Distance de la gauche de la page */
  
-    position: fixed;
-    top: 7px;
-    left: 6px;
-    height: 44px;
-    width: 30px;
-    
+  padding: 10px 20px; /* Espacement intérieur */
+  border-radius: 5px; /* Coins arrondis */
+  text-decoration: none; /* Suppression du soulignage du lien */
 
 
-    .fa-solid  {
-        font-size: 20px; /* Taille de l'icône */
-        background-color: none;
-        width: 18px;
-        height: 16px;
-
-
-  }
+  .fa-arrow-lef {
+  width: 17px;
+  height: 16px;
 }
+
+}
+
 .restaurant__image {
-  position: relative;
+position: relative;
 
 .palette {
   width: 375px;
   height: 275px;
+  @media only screen and (min-width: 1024px) {
+    width:100%;
+    height: 383px;
+  }
 }
+
 }
 .restaurant {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      background-color: rgba(246, 246, 246, 1);
-      border-radius: 40px 40px 0px 0px;
-      padding: 20px;
-      position: absolute;
-      top: 25%;
-
-  .restaurants__description {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-
-      .restaurants__description--title {
-          font-family: 'shrikhand';
-          font-style: italic;
-          font-size: 28px;
-      }
-          .restaurants__description--icone {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-          } 
-      
-    
-      .heart-icon {
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--heart-fill-color)"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>');
-        background-size: cover;
-        cursor: pointer;
-      }
-        /* CSS pour cacher l'élément input */
-      .visually-hidden {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          margin: -1px;
-          padding: 0;
-          overflow: hidden;/*masque tout contenu qui déborde des limites de son conteneur parent.*/
-          clip: rect(0, 0, 0, 0);/*masquer le contenu*/
-          border: 0;
-        }
-
-        input:checked + .heart-icon {
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" fill="rgba(147, 86, 220, 1)"/></svg>');
-        }
-      }
-    .restaurant__menu {
-      .menu__entry {
+    flex-direction: column;
+    gap: 40px;
+    background-color: rgba(246, 246, 246, 1);
+    border-radius: 40px 40px 0px 0px;
+    padding: 20px;
+    /*position: absolute;
+    top: 25%;*/
+    @media only screen and (min-width: 1024px) {
+          margin-left: 193px;
+          margin-right: 193px;
           display: flex;
           flex-direction: column;
-          gap:12px;
-
-          .menu__title {
-            font-size: 16px;
-            color: rgb(0, 0, 0, 1);
-            position: relative; /* Position relative pour faciliter le positionnement de la sous-ligne */
+          justify-content: center;
+          align-items: center;
         }
-          
-          .menu__title::before {
-              content: ''; /* Ajoute un contenu vide */
-              position: absolute; /* Position absolue par rapport à l'élément parent */
-              bottom: -5px; /* Distance de la sous-ligne par rapport au bas de l'élément li */
-              left: 0; /* Alignement de la sous-ligne sur la gauche */
-              right: 0;
-              height:3px; /* Épaisseur de la sous-ligne */
-              background-color: rgba(242, 242, 242, 1);
-              width: 40px;
-              background-color: rgba(153, 226, 208, 1)
+      
+.restaurants__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media only screen and (min-width: 1024px) {
+      gap:20px;
+  }
+    .restaurants__description--title {
+        font-family: 'shrikhand';
+        font-style: italic;
+        font-size: 28px;
+    }
+        .restaurants__description--icone {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        } 
+    
+  
+    .heart-icon {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--heart-fill-color)"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>');
+      background-size: cover;
+      cursor: pointer;
+    }
+      /* CSS pour cacher l'élément input */
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;/*masque tout contenu qui déborde des limites de son conteneur parent.*/
+        clip: rect(0, 0, 0, 0);/*masquer le contenu*/
+        border: 0;
+      }
 
-          
-          }
-          
-          
-          }
-
-        .menu__choice {
-          background-color: white;
-          border-radius: 15px;
-          box-shadow: 0 4px 15px 0;
-          width: 349px;
-          padding: 10px;
-
-          .menu__choice--description {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-          }
-        }
-
+      input:checked + .heart-icon {
+          background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" fill="rgba(147, 86, 220, 1)"/></svg>');
       }
     }
+  .restaurant__menu {
+    .menu__entry {
+        display: flex;
+        flex-direction: column;
+        gap:12px;
+       
+        .menu__title {
+          font-size: 16px;
+          color: rgb(0, 0, 0, 1);
+          position: relative; /* Position relative pour faciliter le positionnement de la sous-ligne */
+          
+        }
+        
+        .menu__title::before {
+            content: ''; /* Ajoute un contenu vide */
+            position: absolute; /* Position absolue par rapport à l'élément parent */
+            bottom: -5px; /* Distance de la sous-ligne par rapport au bas de l'élément li */
+            left: 0; /* Alignement de la sous-ligne sur la gauche */
+            right: 0;
+            height:3px; /* Épaisseur de la sous-ligne */
+            background-color: rgba(242, 242, 242, 1);
+            width: 40px;
+            background-color: rgba(153, 226, 208, 1)
 
-  
-  
+        
+        }
+        
+        
+        }
+
+      .menu__choice {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px 0;
+        width: 349px;
+        padding: 10px;
+        @media only screen and (min-width: 1024px) {
+          width: 634px;
+        }
+        .menu__choice--description {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+      }
+      
+    }
+    .order {
+      display: flex;
+      justify-content: center;
+      margin:30px;
+      .order__button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 186px;
+        height: 50px;
+        color: white;
+        background-image: linear-gradient(to left, rgb(147, 86, 220), rgb(255, 121, 218));
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.5s;
+        font-size: 16px;
+      }
+    }
+  }
+ 
+
+
+
 
 
