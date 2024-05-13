@@ -16,7 +16,6 @@
 }
 
 .restaurant__image {
-position: relative;
 
 .palette {
   width: 375px;
@@ -28,7 +27,11 @@ position: relative;
 }
 
 }
+.main-container { 
+  position: relative;
 .restaurant {
+    position: absolute;
+    margin-top: -50px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -38,8 +41,7 @@ position: relative;
     /*position: absolute;
     top: 25%;*/
     @media only screen and (min-width: 1024px) {
-          margin-left: 193px;
-          margin-right: 193px;
+         margin-left: 383px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -90,7 +92,7 @@ position: relative;
       }
     }
   .restaurant__menu {
-    .menu__entry {
+    .menu__entry, .menu__flat, .menu__dessert {
         display: flex;
         flex-direction: column;
         gap:12px;
@@ -124,18 +126,57 @@ position: relative;
         border-radius: 15px;
         box-shadow: 0 4px 15px 0;
         width: 349px;
-        padding: 10px;
         @media only screen and (min-width: 1024px) {
           width: 634px;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+      
         }
-        .menu__choice--description {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
+       
+        
+        .menu__choice--content {
+          flex-grow: 1;
+          margin: 10px; /* Espacement entre le contenu et l'élément cachet */
       }
       
-    }
+    
+           .element__cachet {
+                position: relative;
+                width: 59px;
+                height: 69px;
+                /*overflow: hidden;*/
+                transition: transform 0.5s ease-in-out;
+               
+
+
+             
+              .checkbox {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 59px;
+                height: 69px;
+                background-color: rgb(153, 226, 208);
+                border-radius: 0 15px 15px 0;
+                right: -59px;
+                position: absolute;
+                top: 0;
+                transition: transform 0.5s ease-in-out;
+                .fa-circle-check {
+                  color:white;
+                }
+                            
+              }             
+          }
+          .element__cachet:hover {
+            transform: translateX(-69px);
+          }   
+          
+        }
+      }
+    
     .order {
       display: flex;
       justify-content: center;
@@ -156,7 +197,12 @@ position: relative;
       }
     }
   }
- 
+  .footer {
+    position: absolute;
+  width: 100%;
+  top: 1550px;
+  }
+}
 
 
 
