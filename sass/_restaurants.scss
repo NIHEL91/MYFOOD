@@ -181,9 +181,12 @@
                 rgb(255, 121, 218)
               );
               border-radius: 20px;
-              cursor: pointer;
               transition: background-color 0.5s;
               font-size: 16px;
+            }
+            .order__button:hover {
+              filter: brightness(1.1); /* Éclaircir le bouton */
+              transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
             }
           }
         }

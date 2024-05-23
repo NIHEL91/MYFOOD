@@ -158,10 +158,13 @@ body {
                 font-size: 16px;
                   
             }
-            input[type="button"]:hover {
+            input[type="button"] {
                 background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
             }
-
+            .search__explore:hover {
+                filter: brightness(1.1); /* Éclaircir le bouton */
+                transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
+              }
         
         }         
            

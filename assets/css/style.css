@@ -138,8 +138,12 @@ body .search__bar .search__explore {
   transition: background-color 0.5s; /* Transition en douceur */
   font-size: 16px;
 }
-body .search__bar input[type=button]:hover {
+body .search__bar input[type=button] {
   background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+}
+body .search__bar .search__explore:hover {
+  filter: brightness(1.1); /* Éclaircir le bouton */
+  transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
 }
 body .functionality {
   display: flex;
@@ -534,9 +538,12 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   color: white;
   background-image: linear-gradient(to left, rgb(147, 86, 220), rgb(255, 121, 218));
   border-radius: 20px;
-  cursor: pointer;
   transition: background-color 0.5s;
   font-size: 16px;
+}
+.main-container .restaurant .order .order__button:hover {
+  filter: brightness(1.1); /* Éclaircir le bouton */
+  transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
 }
 .main-container .footer {
   position: absolute;
