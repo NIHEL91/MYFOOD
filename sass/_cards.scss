@@ -105,13 +105,13 @@
 
 }
 @media only screen and (min-width: 1024px) {
-    
+        
 
         .restaurant__cards {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            gap:60px;
+            
 
             .card {
                     width: 490px;

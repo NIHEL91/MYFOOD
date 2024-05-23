@@ -13,12 +13,14 @@ html { /* Utilisation de box-sizing: inherit pour hériter du modèle de boîte 
 }
 
 body {
-  max-width: 1440px;
   margin: auto;
   font-family: "Roboto", serif;
   /*********************************************************/
   /****search*****/
   /*****functionality***/
+}
+body .main-container {
+  max-width: 1440px;
 }
 body a {
   color: inherit;
@@ -26,6 +28,11 @@ body a {
 }
 body .title {
   margin-left: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  body .title {
+    margin-left: 6%;
+  }
 }
 body .background {
   background-color: transparent; /* Fond transparent */
@@ -344,7 +351,6 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 60px;
   }
   .restaurants .restaurant__cards .card {
     width: 490px;
@@ -393,22 +399,24 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   border-radius: 40px 40px 0px 0px;
   padding: 20px;
   width: 100%;
-  /* @media only screen and (min-width: 1024px) {
-     margin-left: 383px;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-   }*/
+}
+@media only screen and (min-width: 1024px) {
+  .main-container .restaurant {
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 .main-container .restaurant .restaurants__description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* @media only screen and (min-width: 1024px) {
-     gap: 20px;
-   }*/
   /* CSS pour cacher l'élément input */
+}
+@media only screen and (min-width: 1024px) {
+  .main-container .restaurant .restaurants__description {
+    justify-content: center;
+    gap: 25px;
+  }
 }
 .main-container .restaurant .restaurants__description .restaurants__description--title {
   font-family: "shrikhand";

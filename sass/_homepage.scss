@@ -15,12 +15,14 @@ html {/* Utilisation de box-sizing: inherit pour hériter du modèle de boîte d
   
   
 body {
-    max-width: 1440px;
     margin:auto;
     font-family: "Roboto", serif;
     
 
+.main-container {
+        max-width: 1440px;
 
+}
 
     a {
         color: inherit;
@@ -28,7 +30,10 @@ body {
     }
     .title {
         margin-left:20px;
+        @media only screen and (min-width: 1024px) {
+            margin-left: 6%;
     }
+}
     
 
 
