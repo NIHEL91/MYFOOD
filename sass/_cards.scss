@@ -6,12 +6,15 @@
     padding-top: 35px;
     background-color: $backroungd-cards;
     margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+
 
     .restaurant__cards { 
         @include flex-center-columun;
         align-items: center;
         justify-content: center;
-        gap: 18px;
+        gap: 50px;
         margin-bottom: 50px;
 
            

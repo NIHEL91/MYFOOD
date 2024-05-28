@@ -15,11 +15,12 @@ html {/* Utilisation de box-sizing: inherit pour hériter du modèle de boîte d
   
   
 body {
-    margin:auto;
     font-family: "Roboto", serif;
     
 
 .main-container {
+    margin:auto;
+
         max-width: 1440px;
 
 }
@@ -31,9 +32,21 @@ body {
     .title {
         margin-left:20px;
         @media only screen and (min-width: 1024px) {
-            margin-left: 6%;
+            margin-left: unset;
+            width: calc(490px + 50px + 490px);            
+            
+        }
     }
-}
+    @media only screen and (min-width: 1024px) {
+
+   .title1 {
+    margin-left: 206px;
+
+
+   /* width: calc(322px + 20px + 322px + 20px + 322px);*/
+
+}}
+
     
 
 
