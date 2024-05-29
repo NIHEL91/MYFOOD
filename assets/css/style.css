@@ -8,12 +8,14 @@
   box-sizing: inherit;
 }
 
-html { /* Utilisation de box-sizing: inherit pour hériter du modèle de boîte défini par l'élément parent */
+html {
+  /* Utilisation de box-sizing: inherit pour hériter du modèle de boîte défini par l'élément parent */
   box-sizing: border-box; /* Assure que la largeur et la hauteur incluent le padding et la bordure */
 }
 
 body {
   font-family: "Roboto", serif;
+  /*Titre de Fonctionnement et restaurant */
   /*********************************************************/
   /****search*****/
   /*****functionality***/
@@ -31,14 +33,15 @@ body .title {
 }
 @media only screen and (min-width: 1024px) {
   body .title {
-    margin-left: unset;
-    width: 1030px;
+    margin-left: 14%;
   }
+}
+body .title1 {
+  margin-left: 20px;
 }
 @media only screen and (min-width: 1024px) {
   body .title1 {
     margin-left: 206px;
-    /* width: calc(322px + 20px + 322px + 20px + 322px);*/
   }
 }
 body .background {
@@ -67,8 +70,8 @@ body .background {
 body .background .loader {
   width: 48px;
   height: 48px;
-  border: 5px solid #FFF;
-  border-bottom-color: #FF3D00;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
@@ -203,7 +206,8 @@ body .functionality .functionality__links .functionality__links--card .numbered-
   font-family: "Roboto";
   transform: translateX(-160px);
 }
-body .functionality .functionality__links .functionality__links--card .fa-mobile-screen-button, body .functionality .functionality__links .functionality__links--card .fa-list {
+body .functionality .functionality__links .functionality__links--card .fa-mobile-screen-button,
+body .functionality .functionality__links .functionality__links--card .fa-list {
   color: rgb(126, 126, 126);
   margin-right: 20px;
 }
@@ -275,8 +279,6 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   padding-top: 35px;
   background-color: rgb(246, 246, 246);
   margin-top: 40px;
-  align-items: center;
-  justify-content: center;
 }
 .restaurants .restaurant__cards {
   display: flex;
@@ -332,7 +334,11 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   /* CSS pour cacher l'élément input */
 }
 .restaurants .restaurant__cards .card .card__txt .card__text :root {
-  --heart-fill-color: linear-gradient(to left, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+  --heart-fill-color: linear-gradient(
+    to left,
+    rgba(147, 86, 220, 1),
+    rgba(255, 121, 218, 1)
+  );
 }
 .restaurants .restaurant__cards .card .card__txt .card__text .heart-icon {
   display: inline-block;
@@ -377,10 +383,10 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
 
 .button-retour {
   position: absolute; /* Position fixe pour rester en haut de la page */
-  top: 20px; /* Distance du haut de la page */
-  left: 20px; /* Distance de la gauche de la page */
-  padding: 10px 20px; /* Espacement intérieur */
-  border-radius: 5px; /* Coins arrondis */
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
   text-decoration: none; /* Suppression du soulignage du lien */
 }
 .button-retour .fa-arrow-lef {
@@ -483,11 +489,11 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
 .main-container .restaurant .menu__flat .menu__title::before,
 .main-container .restaurant .menu__dessert .menu__title::before {
   content: ""; /* Ajoute un contenu vide */
-  position: absolute; /* Position absolue par rapport à l'élément parent */
-  bottom: -5px; /* Distance de la sous-ligne par rapport au bas de l'élément li */
-  left: 0; /* Alignement de la sous-ligne sur la gauche */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
   right: 0;
-  height: 3px; /* Épaisseur de la sous-ligne */
+  height: 3px;
   background-color: rgb(242, 242, 242);
   width: 40px;
   background-color: rgb(153, 226, 208);
@@ -589,7 +595,7 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
 }
 .main-container .restaurant .order .order__button:hover {
   filter: brightness(1.1); /* Éclaircir le bouton */
-  transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
+  transform: scale(1); /* agrandir légèrement le bouton pour un effet plus dynamique */
 }
 .main-container .footer {
   position: absolute;

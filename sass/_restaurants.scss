@@ -1,10 +1,10 @@
 .button-retour {
   position: absolute; /* Position fixe pour rester en haut de la page */
-  top: 20px; /* Distance du haut de la page */
-  left: 20px; /* Distance de la gauche de la page */
+  top: 20px; 
+  left: 20px; 
 
-  padding: 10px 20px; /* Espacement intérieur */
-  border-radius: 5px; /* Coins arrondis */
+  padding: 10px 20px; 
+  border-radius: 5px; 
   text-decoration: none; /* Suppression du soulignage du lien */
 
   .fa-arrow-lef {
@@ -27,8 +27,7 @@
   .restaurant {
     position: relative;
     margin-top: -50px;
-    display: flex;
-    flex-direction: column;
+    @include flex-columun;
     gap: 40px;
     background-color: rgba(246, 246, 246, 1);
     border-radius: 40px 40px 0px 0px;
@@ -40,13 +39,12 @@
     }
 
     @media only screen and (min-width: 1024px) {
-
-    .restaurant__menu {
-      max-width: 625px;
-      margin-left: 240px;
-      margin-right: 200px;;
+      .restaurant__menu {
+        max-width: 625px;
+        margin-left: 240px;
+        margin-right: 200px;
+      }
     }
-  }
     .restaurants__description {
       display: flex;
       flex-direction: row;
@@ -61,8 +59,7 @@
         font-size: 28px;
       }
       .restaurants__description--icone {
-        display: flex;
-        flex-direction: column;
+        @include flex-columun;
         justify-content: center;
       }
 
@@ -93,8 +90,7 @@
     .restaurant__menu .menu__entry,
     .menu__flat,
     .menu__dessert {
-      display: flex;
-      flex-direction: column;
+      @include flex-columun;
       gap: 12px;
 
       .menu__title {
@@ -105,16 +101,16 @@
 
       .menu__title::before {
         content: ""; /* Ajoute un contenu vide */
-        position: absolute; /* Position absolue par rapport à l'élément parent */
-        bottom: -5px; /* Distance de la sous-ligne par rapport au bas de l'élément li */
-        left: 0; /* Alignement de la sous-ligne sur la gauche */
+        position: absolute; 
+        bottom: -5px; 
+        left: 0; 
         right: 0;
-        height: 3px; /* Épaisseur de la sous-ligne */
+        height: 3px; 
         background-color: rgba(242, 242, 242, 1);
         width: 40px;
         background-color: rgba(153, 226, 208, 1);
       }
-
+      // Animation d'affichage du menu
       .menu__choice {
         animation-duration: 3s;
         animation-delay: 0s;
@@ -140,10 +136,12 @@
         display: flex;
         flex-direction: row;
         overflow: hidden;
+
         .menu__choice--content {
           flex: 1;
           margin: 10px;
-            width: 216px;
+          width: 216px;
+          //pour les texts longs 
           .menu__choice--title,
           .menu__choice--description {
             overflow: hidden;
@@ -160,7 +158,7 @@
           margin: 10px;
           cursor: pointer;
         }
-
+        //animation du checkbox
         .checkbox {
           display: flex;
           justify-content: center;
@@ -179,7 +177,6 @@
         &:hover .checkbox {
           margin-right: 0;
         }
-       
       }
     }
 
@@ -188,10 +185,7 @@
       justify-content: center;
       margin: 30px;
       .order__button {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include flex-center-row;
         width: 186px;
         height: 50px;
         color: white;
@@ -208,7 +202,7 @@
         filter: brightness(1.1); /* Éclaircir le bouton */
         transform: scale(
           1
-        ); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
+        ); /* agrandir légèrement le bouton pour un effet plus dynamique */
       }
     }
   }
