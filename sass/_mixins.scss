@@ -1,20 +1,22 @@
 //Mixins
 @mixin cards-shadow {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre avec un léger flou */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre avec un léger flou */
 }
 
-@mixin flex-center-row{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+@mixin flex-center-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flex-columun {
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
    
+=======
+  display: flex;
+  flex-direction: column;
+>>>>>>> 10006c03cb7c5e8b44eaa34d5ea25fdcd2e6c5a2
 }
-   
-
-

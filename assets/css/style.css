@@ -8,18 +8,20 @@
   box-sizing: inherit;
 }
 
-html { /* Utilisation de box-sizing: inherit pour hériter du modèle de boîte défini par l'élément parent */
+html {
+  /* Utilisation de box-sizing: inherit pour hériter du modèle de boîte défini par l'élément parent */
   box-sizing: border-box; /* Assure que la largeur et la hauteur incluent le padding et la bordure */
 }
 
 body {
-  margin: auto;
   font-family: "Roboto", serif;
+  /*Titre de Fonctionnement et restaurant */
   /*********************************************************/
   /****search*****/
   /*****functionality***/
 }
 body .main-container {
+  margin: auto;
   max-width: 1440px;
 }
 body a {
@@ -31,7 +33,15 @@ body .title {
 }
 @media only screen and (min-width: 1024px) {
   body .title {
-    margin-left: 6%;
+    margin-left: 14%;
+  }
+}
+body .title1 {
+  margin-left: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  body .title1 {
+    margin-left: 206px;
   }
 }
 body .background {
@@ -60,8 +70,8 @@ body .background {
 body .background .loader {
   width: 48px;
   height: 48px;
-  border: 5px solid #FFF;
-  border-bottom-color: #FF3D00;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
@@ -196,7 +206,8 @@ body .functionality .functionality__links .functionality__links--card .numbered-
   font-family: "Roboto";
   transform: translateX(-160px);
 }
-body .functionality .functionality__links .functionality__links--card .fa-mobile-screen-button, body .functionality .functionality__links .functionality__links--card .fa-list {
+body .functionality .functionality__links .functionality__links--card .fa-mobile-screen-button,
+body .functionality .functionality__links .functionality__links--card .fa-list {
   color: rgb(126, 126, 126);
   margin-right: 20px;
 }
@@ -274,7 +285,7 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 50px;
   margin-bottom: 50px;
 }
 .restaurants .restaurant__cards .card {
@@ -323,7 +334,11 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   /* CSS pour cacher l'élément input */
 }
 .restaurants .restaurant__cards .card .card__txt .card__text :root {
-  --heart-fill-color: linear-gradient(to left, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+  --heart-fill-color: linear-gradient(
+    to left,
+    rgba(147, 86, 220, 1),
+    rgba(255, 121, 218, 1)
+  );
 }
 .restaurants .restaurant__cards .card .card__txt .card__text .heart-icon {
   display: inline-block;
@@ -368,10 +383,10 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
 
 .button-retour {
   position: absolute; /* Position fixe pour rester en haut de la page */
-  top: 20px; /* Distance du haut de la page */
-  left: 20px; /* Distance de la gauche de la page */
-  padding: 10px 20px; /* Espacement intérieur */
-  border-radius: 5px; /* Coins arrondis */
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
   text-decoration: none; /* Suppression du soulignage du lien */
 }
 .button-retour .fa-arrow-lef {
@@ -404,6 +419,13 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   .main-container .restaurant {
     width: 80%;
     margin-left: 10%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main-container .restaurant .restaurant__menu {
+    max-width: 625px;
+    margin-left: 240px;
+    margin-right: 200px;
   }
 }
 .main-container .restaurant .restaurants__description {
@@ -467,11 +489,11 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
 .main-container .restaurant .menu__flat .menu__title::before,
 .main-container .restaurant .menu__dessert .menu__title::before {
   content: ""; /* Ajoute un contenu vide */
-  position: absolute; /* Position absolue par rapport à l'élément parent */
-  bottom: -5px; /* Distance de la sous-ligne par rapport au bas de l'élément li */
-  left: 0; /* Alignement de la sous-ligne sur la gauche */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
   right: 0;
-  height: 3px; /* Épaisseur de la sous-ligne */
+  height: 3px;
   background-color: rgb(242, 242, 242);
   width: 40px;
   background-color: rgb(153, 226, 208);
@@ -479,6 +501,11 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
 .main-container .restaurant .restaurant__menu .menu__entry .menu__choice,
 .main-container .restaurant .menu__flat .menu__choice,
 .main-container .restaurant .menu__dessert .menu__choice {
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 4px 15px 0;
@@ -487,15 +514,32 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
   flex-direction: row;
   overflow: hidden;
 }
+@keyframes glissement {
+  from {
+    margin-top: 100%;
+    height: 300%;
+  }
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
 .main-container .restaurant .restaurant__menu .menu__entry .menu__choice .menu__choice--content,
 .main-container .restaurant .menu__flat .menu__choice .menu__choice--content,
 .main-container .restaurant .menu__dessert .menu__choice .menu__choice--content {
   flex: 1;
   margin: 10px;
+  width: 216px;
+}
+.main-container .restaurant .restaurant__menu .menu__entry .menu__choice .menu__choice--content .menu__choice--title,
+.main-container .restaurant .restaurant__menu .menu__entry .menu__choice .menu__choice--content .menu__choice--description,
+.main-container .restaurant .menu__flat .menu__choice .menu__choice--content .menu__choice--title,
+.main-container .restaurant .menu__flat .menu__choice .menu__choice--content .menu__choice--description,
+.main-container .restaurant .menu__dessert .menu__choice .menu__choice--content .menu__choice--title,
+.main-container .restaurant .menu__dessert .menu__choice .menu__choice--content .menu__choice--description {
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
-  width: 200px;
 }
 .main-container .restaurant .restaurant__menu .menu__entry .menu__choice .price,
 .main-container .restaurant .menu__flat .menu__choice .price,
@@ -551,7 +595,7 @@ body .functionality .functionality__links .functionality__links--card .fa-store 
 }
 .main-container .restaurant .order .order__button:hover {
   filter: brightness(1.1); /* Éclaircir le bouton */
-  transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
+  transform: scale(1); /* agrandir légèrement le bouton pour un effet plus dynamique */
 }
 .main-container .footer {
   position: absolute;
