@@ -11,6 +11,12 @@
 }
 
 @mixin flex-columun {
+<<<<<<< HEAD
+    display: flex;
+    flex-direction: column;
+   
+=======
   display: flex;
   flex-direction: column;
+>>>>>>> 10006c03cb7c5e8b44eaa34d5ea25fdcd2e6c5a2
 }

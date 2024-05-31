@@ -4,9 +4,25 @@
   align-items: center;
   gap: 35px;
 
+<<<<<<< HEAD
+       .header {
+            @include flex-columun;
+            justify-content: center;
+            align-items: center;
+            gap:35px;
+        
+                .header__logo  {
+                    width:162px; /* la largeur */
+                    height: 44px;
+                    margin: 15px;
+                        }       
+        }
+    
+=======
   .header__logo {
     width: 162px; /* la largeur */
     height: 44px;
     margin: 15px;
   }
 }
+>>>>>>> 10006c03cb7c5e8b44eaa34d5ea25fdcd2e6c5a2

@@ -10,6 +10,15 @@
     color: white;
   }
 
+<<<<<<< HEAD
+    .footer__txt {
+        @include flex-columun;
+        gap: 5px;
+        margin-top: 10px;
+        margin-left:16px;
+        color:white;
+        padding-bottom: 16px;
+=======
   .footer__txt {
     @include flex-columun;
     gap: 5px;
@@ -17,6 +26,7 @@
     margin-left: 16px;
     color: white;
     padding-bottom: 16px;
+>>>>>>> 10006c03cb7c5e8b44eaa34d5ea25fdcd2e6c5a2
 
     .footer__txt--link {
       display: flex;
