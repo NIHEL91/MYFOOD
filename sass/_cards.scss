@@ -1,20 +1,5 @@
 /***************restaurant*************/
 .restaurants {
-<<<<<<< HEAD
-    
-   @include flex-columun;
-    gap: 20px;
-    padding-top: 35px;
-    background-color: $backroungd-cards;
-    margin-top: 40px;
-
-    .restaurant__cards { 
-        @include flex-columun;
-        align-items: center;
-        justify-content: center;
-        gap: 18px;
-        margin-bottom: 50px;
-=======
   @include flex-columun;
   gap: 20px;
   padding-top: 35px;
@@ -27,7 +12,6 @@
     justify-content: center;
     gap: 50px;
     margin-bottom: 50px;
->>>>>>> 10006c03cb7c5e8b44eaa34d5ea25fdcd2e6c5a2
 
     .card {
       width: 340px;
@@ -47,27 +31,6 @@
         border-radius: 15px 15px 0 0;
       }
 
-<<<<<<< HEAD
-                
-                }
-                
-                .card__txt {
-                    @include flex-columun;
-                    margin:10px;
-                
-                .card__text {
-                    display: flex;
-                    flex-direction: row; /* Assurez-vous que les éléments enfants sont alignés horizontalement */
-                    justify-content: space-between; /* Place les éléments à l'extrémité de chaque ligne */
-                    align-items: center; /* Aligne les éléments verticalement au centre */
-                    padding-left: 5px;
-                
-                    :root {
-                        --heart-fill-color: linear-gradient(to left, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
-                        ;
-                        
-                      }
-=======
       .card__news {
         border-radius: 2px;
         width: 80px;
@@ -79,7 +42,6 @@
         top: 15px; /* Ajustez la valeur selon votre préférence */
         right: 15px; /* Ajustez la valeur selon votre préférence */
       }
->>>>>>> 10006c03cb7c5e8b44eaa34d5ea25fdcd2e6c5a2
 
       .card__txt {
         @include flex-columun;
