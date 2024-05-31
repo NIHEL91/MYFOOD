@@ -1,14 +1,14 @@
 /***************restaurant*************/ 
 .restaurants {
     
-   @include flex-center-columun;
+   @include flex-columun;
     gap: 20px;
     padding-top: 35px;
     background-color: $backroungd-cards;
     margin-top: 40px;
 
     .restaurant__cards { 
-        @include flex-center-columun;
+        @include flex-columun;
         align-items: center;
         justify-content: center;
         gap: 18px;
@@ -48,7 +48,7 @@
                 }
                 
                 .card__txt {
-                    @include flex-center-columun;
+                    @include flex-columun;
                     margin:10px;
                 
                 .card__text {

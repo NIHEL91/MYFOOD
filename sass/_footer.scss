@@ -12,7 +12,7 @@
         }
 
     .footer__txt {
-        @include flex-center-columun;
+        @include flex-columun;
         gap: 5px;
         margin-top: 10px;
         margin-left:16px;
